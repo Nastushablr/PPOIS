@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "Новый профиль",
+    "Projects": [
+      {
+        "Path": "Rectangle\\Rectangle.vcxproj",
+        "Action": "StartWithoutDebugging"
+      },
+      {
+        "Path": "RectangleTest\\RectangleTest.vcxproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

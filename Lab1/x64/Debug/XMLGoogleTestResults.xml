@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites tests="12" failures="0" disabled="0" errors="0" timestamp="2025-12-03T17:37:25" time="0.001" name="AllTests">
+  <testsuite name="RectangleCtorAndPrint" tests="1" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="StoresCoordinates" status="run" time="0" classname="RectangleCtorAndPrint" />
+  </testsuite>
+  <testsuite name="RectangleMove" tests="1" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="ShiftsAllPoints" status="run" time="0" classname="RectangleMove" />
+  </testsuite>
+  <testsuite name="RectangleResize" tests="1" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="ChangesSecondPointOnly" status="run" time="0" classname="RectangleResize" />
+  </testsuite>
+  <testsuite name="RectangleEquality" tests="1" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="EqualAndNotEqual" status="run" time="0" classname="RectangleEquality" />
+  </testsuite>
+  <testsuite name="RectangleStreamOutput" tests="1" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="FormatsCorrectly" status="run" time="0" classname="RectangleStreamOutput" />
+  </testsuite>
+  <testsuite name="RectangleStreamInput" tests="1" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="ReadsValues" status="run" time="0" classname="RectangleStreamInput" />
+  </testsuite>
+  <testsuite name="RectanglePrefixIncrementDecrement" tests="1" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="ChangesSizeInPlace" status="run" time="0" classname="RectanglePrefixIncrementDecrement" />
+  </testsuite>
+  <testsuite name="RectanglePostfixIncrementDecrement" tests="1" failures="0" disabled="0" errors="0" time="0.001">
+    <testcase name="ReturnsOldValue" status="run" time="0" classname="RectanglePostfixIncrementDecrement" />
+  </testsuite>
+  <testsuite name="RectanglePlusOperator" tests="1" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="UnionOfRectangles" status="run" time="0" classname="RectanglePlusOperator" />
+  </testsuite>
+  <testsuite name="RectangleMinusOperator" tests="2" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="IntersectionNonEmpty" status="run" time="0" classname="RectangleMinusOperator" />
+    <testcase name="IntersectionEmpty" status="run" time="0" classname="RectangleMinusOperator" />
+  </testsuite>
+  <testsuite name="RectanglePlusEqualsMinusEquals" tests="1" failures="0" disabled="0" errors="0" time="0">
+    <testcase name="ModifyInPlace" status="run" time="0" classname="RectanglePlusEqualsMinusEquals" />
+  </testsuite>
+</testsuites>
