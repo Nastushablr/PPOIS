@@ -136,17 +136,16 @@ int Set::size() const {
     return (int)data.size();
 }
 
-bool Set::operator[](const string& value) const {
-    for (const auto& e : data)
-        if (!e.isSet && e.value == value) return true;
-    return false;
-}
-
 bool Set::containsElement(const string& v) const {
     for (const auto& e : data)
         if (!e.isSet && e.value == v) return true;
     return false;
 }
+
+bool Set::operator[](const string& value) const {
+    return containsElement(value);
+}
+
 
 Set Set::operator+(const Set& other) const {
     Set res = *this;
