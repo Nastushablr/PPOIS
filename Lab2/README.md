@@ -3,31 +3,7 @@
 ## 📋 Описание проекта
 
 **RepairFirm** — это комплексная C++ система управления деятельностью ремонтной компании. Система включает управление клиентами, сотрудниками, проектами ремонта, материалами, документами и финансами.
-
-**Язык**: C++  
-**Стандарт**: C++11 и выше  
-**Кодировка**: UTF-8  
-**Документация**: Doxygen
-
 ---
-
-## 🏗️ Архитектура системы
-
-### Структура папок
-```
-project/
-├── base/              # Базовые типы данных (Date, Address, Person)
-├── clients/           # Классы клиентов
-├── staff/             # Классы сотрудников
-├── repairs/           # Управление ремонтными проектами
-├── materials/         # Материалы, инструменты, склады
-├── documents/         # Документооборот
-├── exceptions/        # Специализированные исключения
-└── Doxyfile           # Конфигурация для генерации документации
-```
-
----
-
 ## 📦 КЛАССЫ И ИХ ОПИСАНИЕ
 
 ### =============== BASE (Базовые типы) ===============
@@ -926,10 +902,10 @@ project/
 Employee                   WorkType              Material           Document
    ├─ Manager              ├─ DesignWork         ├─ BuildingMaterial   ├─ Contract
    ├─ HRSpecialist         ├─ FinishingWork      └─ FinishingMaterial  ├─ Estimate
-   ├─ Accountant           └─ MasonryWork                            ├─ Invoice
-   └─ RepairSpecialist                                               ├─ Payment
-      ├─ Designer                                                    ├─ ActOfCompletion
-      ├─ Electrician                                                 └─ FinancialReport
+   ├─ Accountant           └─ MasonryWork                              ├─ Invoice
+   └─ RepairSpecialist                                                 ├─ Payment
+      ├─ Designer                                                      ├─ ActOfCompletion
+      ├─ Electrician                                                   └─ FinancialReport
       └─ Foreman
 
 Client
@@ -960,80 +936,3 @@ Client
 | `FinancialReport` | агрегирует | `Invoice[]`, `Payment[]` |
 
 ---
-
-## 🚀 ЗАПУСК И ГЕНЕРАЦИЯ ДОКУМЕНТАЦИИ
-
-### Компиляция
-```bash
-g++ -std=c++11 -utf-8 -o repairfirm *.cpp
-# или в Visual Studio: /utf-8 флаг
-```
-
-### Генерация Doxygen
-```bash
-doxygen Doxyfile
-# Открыть docs/html/index.html
-```
-
-### Конвертация кодировки (PowerShell)
-```powershell
-.\ConvertToUTF8.ps1
-```
-
----
-
-## 📝 ПРИМЕРЫ ИСПОЛЬЗОВАНИЯ
-
-### Создание клиента
-```cpp
-Address* addr = new Address("ул. Чернышевского", "Минск", "220030", "Беларусь");
-Date birthDate(15, 3, 1990);
-Person* person = new Person(1, "Иван", "Петров", birthDate, "+375291234567", "ivan@mail.com", "AB123456", "Беларусь");
-PrivateClient* client = new PrivateClient(1, person, addr, Date(15, 12, 2024), "+375291234567", "ivan@mail.com");
-```
-
-### Создание проекта
-```cpp
-RepairObject* object = new RepairObject(1, addr, client, "квартира", 65.5, 1995);
-RepairProject* project = new RepairProject(1, client, object, Date(15, 12, 2024), 5000.0);
-project->setPlannedEndDate(Date(15, 1, 2025));
-project->setStatus("active");
-```
-
-### Управление задачами
-```cpp
-DesignWork* design = new DesignWork(1, 500.0, 3, true);
-Task* task = new Task(1, project, designer, design, "Разработка дизайна", 1, Date(20, 12, 2024));
-project->addTask(task);
-task->start();
-```
-
----
-
-## 🔧 ТРЕБОВАНИЯ
-
-- **C++**: версия 11 и выше
-- **Компилятор**: GCC 4.9+, Clang 3.5+, MSVC 2015+
-- **ОС**: Windows, Linux, macOS
-- **Дополнительно**: Doxygen для генерации документации
-
----
-
-## 📄 ЛИЦЕНЗИЯ
-
-Проект создан в образовательных целях.
-
----
-
-## 👤 РАЗРАБОТКА
-
-**Система разработана с использованием**:
-- Объектно-ориентированное программирование (ООП)
-- Наследование и полиморфизм
-- Обработка исключений
-- Динамическая память (указатели, new/delete)
-- Контейнеры STL (vector, map, string)
-
----
-
-*Документация автоматически генерируется из Doxygen комментариев в исходном коде.*
