@@ -74,14 +74,17 @@ python -m unittest discover -v
 ```
 Name                        Stmts  Miss Cover
 ------------------------------------------------
-army/__init__.py                0     0   100%
-army/models.py                 93     0   100% 
-army/world.py                 132     4    97%
-tests/test_cli_helpers.py     192     1    99%
-tests/test_models.py          171     0   100%
-tests/test_world.py          115     0   100%
-------------------------------------------------
-TOTAL                         853    53    94%
+army\__init__.py                0      0   100%
+army\exceptions.py              2      0   100%
+army\models.py                 93      0   100%
+army\world.py                 132      4    97%
+cli.py                        248     48    81%
+tests\__init__.py               0      0   100%
+tests\test_cli_helpers.py     192      1    99%
+tests\test_models.py           71      0   100%
+tests\test_world.py           115      0   100%
+-----------------------------------------------
+TOTAL                         853     53    94%
 ```
 
 
