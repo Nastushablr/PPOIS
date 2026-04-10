@@ -105,7 +105,7 @@ class World:
                 last_name=last_name,
                 first_name=first_name,
                 patronymic=patronymic,
-                rank=Rank.PRIVATE,  # самый низкий ранг
+                rank=Rank.PRIVATE,
                 specialization=random_spec,
             )
             created.append(soldier)
@@ -151,7 +151,6 @@ class World:
         upgraded_bases = 0
 
         for base in army.bases:
-            # Усиление охраны требует ресурсов
             if base.supplies >= 30:
                 base.supplies -= 30
                 base.security_level += 1
